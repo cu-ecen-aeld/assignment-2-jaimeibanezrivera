@@ -1,0 +1,179 @@
+{
+  "main": {
+    "id": "1bd48779333969f3",
+    "type": "split",
+    "children": [
+      {
+        "id": "b403d2e6d543b841",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "97e57fdb1b9d7628",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Advanced Linux Command Line.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "ea4a8115d58a083c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Scripting.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "91a08e9f988e630a",
+    "type": "split",
+    "children": [
+      {
+        "id": "f0f79ec249393bfb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "23ae4017d7b6e1d9",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "f43ae1e3e8af1de8",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "c63dc446436aa74d",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "e58acfd34bc4bd63",
+    "type": "split",
+    "children": [
+      {
+        "id": "96d98d071d727001",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "559eaea7c3bff12a",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Scripting.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "1051530f3acf8d89",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Scripting.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "59a9a45d114732f8",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "977b1e0d9f450d34",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Scripting.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "23ae4017d7b6e1d9",
+  "lastOpenFiles": [
+    "z_Attachments/Untitled",
+    "Advanced Linux Command Line.md",
+    "Scripting.md",
+    "z_Attachments/Pasted image 20241009153713.png",
+    "z_Attachments/Pasted image 20241009113759.png",
+    "z_Attachments/Pasted image 20241009113038.png",
+    "z_Attachments",
+    "z_Attachments/Pasted image 20241009115416.png",
+    "z_Attachments/Pasted image 20241009115303.png",
+    "z_Attachments/Pasted image 20241009115215.png",
+    "z_Attachments/Pasted image 20241009115044.png",
+    "z_Attachments/Pasted image 20241009114951.png",
+    "z_Attachments/Pasted image 20241009114600.png",
+    "z_Attachments/Pasted image 20241009114026.png"
+  ]
+}
