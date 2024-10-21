@@ -1,26 +1,38 @@
-#!/bin/bash
+#!/bin/sh
+
+writefile=""
+writestr=""
 
 
-#Check if two arguments are provided
-if [ $# -ne 2 ]; then
-	echo "Error: Two arguments are required."
-	exit 1
-fi
+check_arg()
+{
+    if [ "$#" -ne 2 ]; then
+        echo "Error: Exactly two arguments are required."
+        echo "Usage: $0 <write file path> <string to write>"
+        exit 1
+    fi
 
-writefile=$1
-writestr=$2
+    writefile=$1
+    writestr=$2
+}
 
-#If the directory does not exist we create it
-mkdir -p "$(dirname "$writefile")"
+write_string()
+{
+    mkdir -p "$(dirname "$writefile")"
+    if [ $? -ne 0 ]; then
+        echo "Could not create the '$writefile' directory."
+        exit 1
+    fi
+    
+    echo "$writestr" > "$writefile"
 
-#We write or overwrite the file:
-echo "$writestr">"$writefile"
+    if [ $? -ne 0 ]; then
+        echo "Could not write '$writestr' string into the '$writefile' directory."
+        exit 1
+    fi
 
-#check for file creation:
-if [ $? -ne 0 ]; then
-	echo "Error: The file $writefile could not be created"
-	exit 1
-fi
+    echo "File '$writefile' created successfully with the specified content."
+}
 
-echo "File $writefile created successfully with content: $writestr"
-
+check_arg "$@"
+write_string

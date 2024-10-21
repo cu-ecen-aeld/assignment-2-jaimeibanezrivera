@@ -1,30 +1,44 @@
-#!/bin/bash
+#!/bin/sh
+
+filesdir=""
+searchstr=""
+num_of_instances=0
+num_of_files=0
+
+check_arg()
+{
+    if [ "$#" -ne 2 ]; then
+        echo "Error: Exactly two arguments are required."
+        echo "Usage: $0 <filesdir> <searchstr>"
+        exit 1
+    fi
+
+    filesdir=$1
+    searchstr=$2
+}
+
+change_filesdir()
+{
+    cd "$filesdir"
+
+    if [ $? -ne 0 ]; then
+        echo "Directory does not exist!"
+        exit 1
+    else 
+        echo "Searching for '$searchstr' in '$filesdir'  directory."
+    fi
+
+}
+
+look_for_string()
+{
+    num_of_instances=$(grep -rlI "$searchstr" $filesdir | wc -l)
+    num_of_files=$(grep -rI "$searchstr" $filesdir | wc -l)
+
+    echo "The number of files are $num_of_files and the number of matching lines are $num_of_instances"
+}
 
 
-# Check if two arguments are provided
-if [ $# -ne 2 ]; then
-	echo "Error: You need TWO ARGUMENTS!! "
-	echo "Usage: $0 <directory_path> <search_string>"
-	exit  1
-fi
-
-# We assign the arguments to variables
-filesdir=$1
-searchstr=$2
-
-# We look for the directories
-if [ ! -d "$filesdir" ]; then
-	echo "Error: $filesdir is not a directory!!"
-	exit 1
-fi
-
-#Now we Find the number of files in the directory and subdirectories (X)
-X=$(find "$filesdir" -type f | wc -l)
-
-#Find Matching lines (Y) (2>/dev/null is to avoid outputting error messages)
-Y=$(grep -r "$searchstr" "$filesdir" 2>/dev/null | wc -l) 
-
-#Output of result
-echo "The number of files are $X and the number of matching lines are $Y"
-
-
+check_arg "$@"
+change_filesdir
+look_for_string
